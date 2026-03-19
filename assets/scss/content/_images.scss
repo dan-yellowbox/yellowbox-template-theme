@@ -1,0 +1,50 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bs-background-overlay);
+  z-index: 3;
+}
+
+.background-overlay-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba($black, 0.8), rgba($black, 0.2));
+  z-index: 3;
+}
+
+.background-video,
+.background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.aligncenter {
+  display: block;
+  margin: auto;
+}
+
+.image-container {
+  z-index: 5;
+}

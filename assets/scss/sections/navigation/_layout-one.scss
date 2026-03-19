@@ -1,0 +1,36 @@
+.layout-one {
+
+	@include media-breakpoint-up(lg) {
+
+		.navbar {
+
+			.navbar-brand {
+				width: 180px;
+			}
+
+			.navbar-nav {
+
+				&.header-buttons {
+					width: 180px;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+
+		.navbar {
+
+			.navbar-brand {
+				width: 320px;
+			}
+
+			.navbar-nav {
+
+				&.header-buttons {
+					width: 320px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.social-icons {
+
+  a {
+    height: 42px;
+    width: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-pill;
+    border: 1px solid $dark;
+    color: $dark;
+
+    &:hover {
+      text-decoration: none !important;
+      opacity: 0.75;
+    }
+  }
+}
+
+.bg-dark,
+.bg-primary-dark {
+
+  .social-icons {
+
+    a {
+      border-color: $white !important;
+      color: $white !important;
+    }
+  } 
+}

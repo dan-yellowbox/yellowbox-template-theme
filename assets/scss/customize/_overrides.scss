@@ -1,0 +1,144 @@
+// Colours
+$white: #FFFFFF;
+$black: #111111;
+$gray-100: #F5F5F5;
+$gray-200: #D0D0D0;
+$gray-300: #B4B4B4;
+$gray-400: #999999;
+$gray-500: #7C7C7C;
+$gray-600: #606060;
+$gray-700: #444444;
+$gray-800: #2F2F2F;
+$gray-900: #222222;
+
+$blue: #0d6efd;
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #198754;
+
+$light: $gray-100;
+$dark: $gray-900;
+
+$primary: $dark;
+$primary-text: $dark;
+$primary-bg-subtle: $gray-200;
+$primary-border-subtle: $gray-300;
+
+$success: $green;
+$info: $blue;
+$warning: $yellow;
+$danger: $red;
+
+$colors: (
+  "blue":       $blue,
+  "red":        $red,
+  "yellow":     $yellow,
+  "green":      $green,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "gray": $gray-500,
+  "graylighter": $gray-100,
+  "graylight": $gray-300,
+  "graydark": $gray-700,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "black": $black,
+  "white": $white,
+  "light": $light,
+  "dark": $dark
+);
+
+// Typography
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$body-color: $gray-600;
+$link-color: $dark;
+
+$headings-color: $dark;
+$headings-font-weight: $font-weight-semibold;
+$display-font-weight: $headings-font-weight;
+
+// Spacer
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2.5,
+  6: $spacer * 3.5,
+  7: $spacer * 4,
+  8: $spacer * 5,
+  9: $spacer * 6,
+  10: $spacer * 8,
+);
+
+$enable-negative-margins: true;
+
+// Navbar
+$navbar-nav-link-padding-x: 1.25rem;
+$navbar-dark-color: $white;
+$navbar-light-color: $black;
+$dropdown-link-color: $navbar-light-color;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+
+// Buttons
+$input-padding-y: 0.5rem;
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 0.75rem;
+$btn-padding-x: 1.25rem;
+$btn-padding-x-sm: 0.75rem;
+$btn-padding-y-sm: 0.5rem;
+$btn-font-size-sm: 0.875rem;
+
+// Accordion
+$accordion-button-color: $dark;
+$accordion-button-focus-box-shadow: unset;
+
+// Forms
+$form-label-color: $dark;
+$component-active-bg: $dark;
+$input-btn-focus-width: .15rem;
+$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-blur: 0;
+$input-btn-focus-box-shadow: inset 0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+
+// Cards
+$card-bg: $white;
+
+// Nav Tabs
+$nav-underline-gap: 2rem;
+
+// Borders
+$border-color: $gray-200;
+$table-border-color: $gray-200;
+
+// Offcanvas
+$zindex-modal-backdrop: 1041;
+
+// Footer
+$footer-brand-height: 3rem;
+$footer-brand-height-mobile: 2.25rem;
+$footer-light-color: $body-color;
+$footer-light-headings-color: $dark;
+$footer-light-link-color: $footer-light-color;
+$footer-dark-color: $gray-300;
+$footer-dark-headings-color: $light;
+$footer-dark-link-color: $footer-dark-color;

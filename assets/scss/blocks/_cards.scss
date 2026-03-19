@@ -1,0 +1,19 @@
+.block-cards {
+
+  .cards-carousel {
+
+    .slick-list {
+      padding: 0 !important;
+    }
+
+    &.slick-slider {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+
+      .slick-slide {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

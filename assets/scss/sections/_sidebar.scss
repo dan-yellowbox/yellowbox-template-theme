@@ -1,0 +1,6 @@
+.sidebar {
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: ($spacer * 3);
+  }
+}

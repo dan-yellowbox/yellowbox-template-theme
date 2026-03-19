@@ -1,0 +1,170 @@
+footer.site-footer {
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  aside {
+
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .footer-logo { 
+
+    img {
+      width: auto;
+      height: $footer-brand-height;
+    }
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-bottom {
+
+    .menu {
+      display: flex;
+      margin: 0;
+
+      li:not(:first-child) {
+        display: flex;
+        margin-left: 1rem;
+      }
+
+      ul {
+        display: flex;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &.footer-light {
+    color: $footer-light-color;
+
+    a:not(.btn) {
+      color: $footer-light-link-color;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong {
+      color: $footer-light-headings-color;
+    }
+  }
+
+  &.footer-dark {
+    color: $footer-dark-color;
+
+    a:not(.btn) {
+      color: $footer-dark-link-color;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong {
+      color: $footer-dark-headings-color;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    [class*="col-lg"] {
+
+      &:not(:last-child) {
+
+        .widget-area {
+          margin-bottom: $spacer * 1.5;
+        }
+      }
+
+      &:last-child {
+
+        .widget-area {
+
+          &:not(:last-child) {
+            margin-bottom: $spacer * 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+
+    .footer-logo { 
+
+      img {
+        height: $footer-brand-height-mobile;
+      }
+    }
+
+    [class*="col-md"] {
+
+      &:not(:last-child) {
+
+        .widget-area {
+          margin-bottom: $spacer * 1.5;
+        }
+      }
+
+      &:last-child {
+
+        .widget-area {
+
+          &:not(:last-child) {
+            margin-bottom: $spacer * 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.backtotop {
+  position: fixed;
+  bottom: 2.25rem;
+  right: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  z-index: 6;
+  text-decoration: none;
+  border-radius: $border-radius;
+}

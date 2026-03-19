@@ -1,0 +1,320 @@
+.woocommerce-page {
+
+  .woocommerce,
+  .variations_form,
+  .woocommerce-ordering,
+  .cart,
+  .comment-form {
+
+    .select2 {
+
+      .select2-selection {
+        padding: $input-padding-y 4px;
+        height: auto !important;
+      }
+
+      .select2-selection__arrow {
+        top: 9px;
+        right: 4px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: $form-label-margin-bottom;
+      @include font-size($form-label-font-size);
+      font-style: $form-label-font-style;
+      font-weight: $form-label-font-weight;
+      color: $form-label-color;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: $input-padding-y $input-padding-x;
+      font-family: $input-font-family;
+      @include font-size($input-font-size);
+      font-weight: $input-font-weight;
+      line-height: $input-line-height;
+      color: $input-color;
+      background-color: $input-bg;
+      background-clip: padding-box;
+      border: $input-border-width solid $input-border-color;
+      appearance: none; // Fix appearance for date inputs in Safari
+
+      // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+      @include border-radius($input-border-radius, 0);
+
+      @include box-shadow($input-box-shadow);
+      @include transition($input-transition);
+
+      &[type="file"] {
+        overflow: hidden; // prevent pseudo element button overlap
+
+        &:not(:disabled):not([readonly]) {
+          cursor: pointer;
+        }
+      }
+
+      // Customize the `:focus` state to imitate native WebKit styles.
+      &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        @if $enable-shadows {
+          @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+        } @else {
+          // Avoid using mixin so we can pass custom focus shadow properly
+          box-shadow: $input-focus-box-shadow;
+        }
+      }
+
+      // Add some height to date inputs on iOS
+      // https://github.com/twbs/bootstrap/issues/23307
+      // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+      &::-webkit-date-and-time-value {
+        // Multiply line-height by 1em if it has no unit
+        height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+      }
+
+      // Placeholder
+      &::placeholder {
+        color: $input-placeholder-color;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+      }
+
+      // Disabled and read-only inputs
+      //
+      // HTML5 says that controls under a fieldset > legend:first-child won't be
+      // disabled if the fieldset is disabled. Due to implementation difficulty, we
+      // don't honor that edge case; we style them as disabled anyway.
+      &:disabled,
+      &[readonly] {
+        background-color: $input-disabled-bg;
+        border-color: $input-disabled-border-color;
+        // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1;
+      }
+
+      // File input buttons theming
+      // stylelint-disable-next-line selector-pseudo-element-no-unknown
+      &::file-selector-button {
+        padding: $input-padding-y $input-padding-x;
+        margin: (-$input-padding-y) (-$input-padding-x);
+        margin-inline-end: $input-padding-x;
+        color: $form-file-button-color;
+        @include gradient-bg($form-file-button-bg);
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: $input-border-width;
+        border-radius: 0; // stylelint-disable-line property-disallowed-list
+        @include transition($btn-transition);
+      }
+
+      // stylelint-disable-next-line selector-pseudo-element-no-unknown
+      &:hover:not(:disabled):not([readonly])::file-selector-button {
+        background-color: $form-file-button-hover-bg;
+      }
+
+      &::-webkit-file-upload-button {
+        padding: $input-padding-y $input-padding-x;
+        margin: (-$input-padding-y) (-$input-padding-x);
+        margin-inline-end: $input-padding-x;
+        color: $form-file-button-color;
+        @include gradient-bg($form-file-button-bg);
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-inline-end-width: $input-border-width;
+        border-radius: 0; // stylelint-disable-line property-disallowed-list
+        @include transition($btn-transition);
+      }
+
+      &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+        background-color: $form-file-button-hover-bg;
+      }
+    }
+
+    select {
+      display: block;
+      width: 100%;
+      padding: $form-select-padding-y ($form-select-padding-x + $form-select-indicator-padding) $form-select-padding-y $form-select-padding-x;
+      font-family: $form-select-font-family;
+      @include font-size($form-select-font-size);
+      font-weight: $form-select-font-weight;
+      line-height: $form-select-line-height;
+      color: $form-select-color;
+      vertical-align: middle;
+      background-color: $form-select-bg;
+      background-image: escape-svg($form-select-indicator);
+      background-repeat: no-repeat;
+      background-position: $form-select-bg-position;
+      background-size: $form-select-bg-size;
+      border: $form-select-border-width solid $form-select-border-color;
+      @include border-radius($form-select-border-radius, 0);
+      @include box-shadow($form-select-box-shadow);
+      appearance: none;
+
+      &:focus {
+        border-color: $form-select-focus-border-color;
+        outline: 0;
+        @if $enable-shadows {
+          @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
+        } @else {
+          // Avoid using mixin so we can pass custom focus shadow properly
+          box-shadow: $form-select-focus-box-shadow;
+        }
+      }
+
+      &[multiple],
+      &[size]:not([size="1"]) {
+        padding-right: $form-select-padding-x;
+        background-image: none;
+      }
+
+      &:disabled {
+        color: $form-select-disabled-color;
+        background-color: $form-select-disabled-bg;
+        border-color: $form-select-disabled-border-color;
+      }
+
+      // Remove outline from select box in FF
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $form-select-color;
+      }
+    }
+ 
+    .password-input {
+      position: relative;
+
+      .show-password-input {
+        background: none;
+        font-family: "Font Awesome 6 Pro";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'><path d='M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zm151 118.3C226 97.7 269.5 80 320 80c65.2 0 118.8 29.6 159.9 67.7C518.4 183.5 545 226 558.6 256c-12.6 28-36.6 66.8-70.9 100.9l-53.8-42.2c9.1-17.6 14.2-37.5 14.2-58.7c0-70.7-57.3-128-128-128c-32.2 0-61.7 11.9-84.2 31.5l-46.1-36.1zM394.9 284.2l-81.5-63.9c4.2-8.5 6.6-18.2 6.6-28.3c0-5.5-.7-10.9-2-16c.7 0 1.3 0 2 0c44.2 0 80 35.8 80 80c0 9.9-1.8 19.4-5.1 28.2zm9.4 130.3C378.8 425.4 350.7 432 320 432c-65.2 0-118.8-29.6-159.9-67.7C121.6 328.5 95 286 81.4 256c8.3-18.4 21.5-41.5 39.4-64.8L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5l-41.9-33zM192 256c0 70.7 57.3 128 128 128c13.3 0 26.1-2 38.2-5.8L302 334c-23.5-5.4-43.1-21.2-53.7-42.3l-56.1-44.2c-.2 2.8-.3 5.6-.3 8.5z'/></svg>");
+        background-size: 50% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+
+        &.display-password {
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'><path d='M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z'/></svg>");
+        }
+      }
+    }
+
+    input[type="submit"] {
+      display: inline-block;
+      font-family: $btn-font-family;
+      font-weight: $btn-font-weight;
+      line-height: $btn-line-height;
+      text-align: center;
+      text-decoration: if($link-decoration == none, null, none);
+      white-space: $btn-white-space;
+      vertical-align: middle;
+      cursor: if($enable-button-pointers, pointer, null);
+      user-select: none;
+      border: $btn-border-width solid transparent;
+      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+      @include transition($btn-transition);
+      @include button-variant($primary, $primary);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: $form-check-input-width;
+      height: $form-check-input-width;
+      margin-top: ($line-height-base - $form-check-input-width) / 2; // line-height minus check height
+      vertical-align: top;
+      background-color: $form-check-input-bg;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border: $form-check-input-border;
+      appearance: none;
+      color-adjust: exact; // Keep themed appearance for print
+      @include transition($form-check-transition);
+      padding: 0;
+
+      &[type="checkbox"] {
+        width: 1rem !important;
+        display: inline-block;
+        @include border-radius($form-check-input-border-radius);
+      }
+
+      &[type="radio"] {
+        width: 1rem !important;
+        display: inline-block;
+        // stylelint-disable-next-line property-disallowed-list
+        border-radius: $form-check-radio-border-radius;
+      }
+
+      &:active {
+        filter: $form-check-input-active-filter;
+      }
+
+      &:focus {
+        border-color: $form-check-input-focus-border;
+        outline: 0;
+        box-shadow: $form-check-input-focus-box-shadow;
+      }
+
+      &:checked {
+        background-color: $form-check-input-checked-bg-color;
+        border-color: $form-check-input-checked-border-color;
+
+        &[type="checkbox"] {
+          @if $enable-gradients {
+            background-image: escape-svg($form-check-input-checked-bg-image), var(--#{$variable-prefix}gradient);
+          } @else {
+            background-image: escape-svg($form-check-input-checked-bg-image);
+          }
+        }
+
+        &[type="radio"] {
+          @if $enable-gradients {
+            background-image: escape-svg($form-check-radio-checked-bg-image), var(--#{$variable-prefix}gradient);
+          } @else {
+            background-image: escape-svg($form-check-radio-checked-bg-image);
+          }
+        }
+      }
+
+      &[type="checkbox"]:indeterminate {
+        background-color: $form-check-input-indeterminate-bg-color;
+        border-color: $form-check-input-indeterminate-border-color;
+
+        @if $enable-gradients {
+          background-image: escape-svg($form-check-input-indeterminate-bg-image), var(--#{$variable-prefix}gradient);
+        } @else {
+          background-image: escape-svg($form-check-input-indeterminate-bg-image);
+        }
+      }
+
+      &:disabled {
+        pointer-events: none;
+        filter: none;
+        opacity: $form-check-input-disabled-opacity;
+      }
+
+      // Use disabled attribute in addition of :disabled pseudo-class
+      // See: https://github.com/twbs/bootstrap/issues/28247
+      &[disabled],
+      &:disabled {
+        ~ .form-check-label {
+          opacity: $form-check-label-disabled-opacity;
+        }
+      }
+    }
+  }
+}

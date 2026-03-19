@@ -1,0 +1,32 @@
+.block-marquee {
+  width: 100%;
+  overflow: hidden;
+  display: grid !important;
+  place-items: center;
+  transition: 0.5s;
+
+  .marquee-track {
+    display: flex;
+    align-items: flex-start;
+
+    .item {
+      display: flex;
+      align-items: flex-end;
+      width: auto;
+	    cursor: pointer;
+      padding: 0 1.25rem;
+
+      img {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &.static {
+      justify-content: center;
+    }
+  }
+}

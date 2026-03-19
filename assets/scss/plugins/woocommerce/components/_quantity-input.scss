@@ -1,0 +1,35 @@
+.quantity-input-group {
+  flex-wrap: nowrap;
+  border: 1px solid $border-color;
+  justify-content: space-between;
+  border-radius: $input-border-radius;
+
+  input {
+    border: none !important;
+    text-align: center;
+    -webkit-appearance: none;
+
+    &.qty {
+      width: 100px !important;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.quantity {
+  margin-bottom: $spacer * 0.5;
+
+  .screen-reader-text {
+    display: none;
+  }
+}

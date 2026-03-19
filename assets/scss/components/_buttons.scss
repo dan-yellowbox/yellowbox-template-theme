@@ -1,0 +1,13 @@
+.btn,
+button,
+submit[type="button"],
+.button {
+
+	&[class*="bg-opacity"] {
+
+		&:hover,
+		&:active {
+			--bs-bg-opacity: 0.7;
+		}
+	}
+}

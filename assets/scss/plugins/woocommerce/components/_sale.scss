@@ -1,0 +1,9 @@
+.onsale {
+  position: absolute;
+  top: $spacer * 0.25;
+  left: $spacer * 0.25;
+  padding: $spacer * 0.5;
+  background: $primary;
+  color: $white;
+  z-index: 5;
+}

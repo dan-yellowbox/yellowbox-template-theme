@@ -1,0 +1,63 @@
+.megamenu {
+
+  .row {
+
+    .megamenu-card {
+
+      a {
+        position: relative;
+
+        img {
+          transition: $transition-base;
+        }
+
+        h5 {
+          position: relative;
+          z-index: 5;
+          margin-top: auto;
+        }
+      }
+
+      &:hover {
+
+        img {
+          opacity: 0.85;
+        }
+      }
+    }
+
+    > .megamenu-card {
+      margin-left: auto;
+    }
+
+    > .megamenu-card:first-child {
+      margin-left: 0;
+    }
+
+    > .megamenu-card ~ .megamenu-card {
+      margin-left: 0;
+    }
+
+    h5.border-bottom {
+      border-bottom: 1px solid $border-color !important;
+    }
+
+    ul {
+
+      li {
+
+        a {
+          color: $dark;
+
+          &:hover {
+            text-decoration: underline !important;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

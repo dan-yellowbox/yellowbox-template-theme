@@ -1,0 +1,271 @@
+
+		/* AUTOMATICALLY GENEREATED FILE - DO NOT EDIT */
+
+		:root,
+		[data-bs-theme=light] {
+		  --bs-primary: #514ac9;
+		  --bs-primary-hover: #4943b5;
+		  --bs-primary-light: #e4e9fa;
+		  --bs-primary-light-hover: #cdd2e1;
+      --bs-primary-dark: #232044;
+      --bs-primary-dark-hover: #201d3d;
+		  --bs-secondary: #232044;
+		  --bs-secondary-hover: #201d3d;
+		  --bs-white: #ffffff;
+      --bs-light: #f4f4f4;
+		  --bs-light-hover:  #dcdcdc;
+		  --bs-dark:  #232044;
+		  --bs-dark-hover: #201d3d;
+		  --bs-primary-rgb: 81, 74, 201;
+		  --bs-secondary-rgb: 35, 32, 68;
+		  --bs-white-rgb: 255, 255, 255;
+      --bs-light-rgb: 244, 244, 244;
+		  --bs-dark-rgb: 35, 32, 68;
+		  --bs-primary-text-emphasis: #052c65;
+		  --bs-secondary-text-emphasis: #2b2f32;
+		  --bs-light-text-emphasis: #495057;
+		  --bs-dark-text-emphasis: #495057;
+		  --bs-primary-bg-subtle: #cfe2ff;
+		  --bs-secondary-bg-subtle: #e2e3e5;
+		  --bs-light-bg-subtle: #fcfcfd;
+		  --bs-dark-bg-subtle: #ced4da;
+		  --bs-primary-border-subtle: #9ec5fe;
+		  --bs-secondary-border-subtle: #c4c8cb;
+		  --bs-light-border-subtle: #e9ecef;
+		  --bs-dark-border-subtle: #adb5bd;
+		  --bs-font-sans-serif: "Inter Tight", sans-serif;
+		  --bs-font-serif: ;
+		  --bs-body-font-size: 1rem;
+		  --bs-body-font-weight: 400;
+		  --bs-body-line-height: 1.5;
+		  --bs-body-color: #212529;
+		  --bs-body-color-rgb: 33, 37, 41;
+		  --bs-body-bg: #ffffff;
+		  --bs-body-bg-rgb: 255, 255, 255;
+		  --bs-emphasis-color: #000;
+		  --bs-emphasis-color-rgb: 0, 0, 0;
+		  --bs-secondary-color: rgba(33, 37, 41, 0.75);
+		  --bs-secondary-color-rgb: 33, 37, 41;
+		  --bs-secondary-bg: #e9ecef;
+		  --bs-secondary-bg-rgb: 233, 236, 239;
+		  --bs-tertiary-color: rgba(33, 37, 41, 0.5);
+		  --bs-tertiary-color-rgb: 33, 37, 41;
+		  --bs-tertiary-bg: #f8f9fa;
+		  --bs-tertiary-bg-rgb: 248, 249, 250;
+		  --bs-heading-color: inherit;
+		  --bs-link-color: var(--bs-body-color);
+		  --bs-link-color-rgb: var(--bs-body-color-rgb);
+		  --bs-link-decoration: underline;
+		  --bs-link-hover-color: var(--bs-primary);
+		  --bs-link-hover-color-rgb: var(--bs-primary-rgb);
+		  --bs-code-color: #d63384;
+		  --bs-highlight-color: #212529;
+		  --bs-highlight-bg: #fff3cd;
+		  --bs-border-width: 1px;
+		  --bs-border-style: solid;
+		  --bs-border-color: #dee2e6;
+		  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+		  --bs-border-radius: 0.375rem;
+		  --bs-border-radius-sm: 0.25rem;
+		  --bs-border-radius-lg: 0.5625rem;
+		  --bs-border-radius-xl: 0.5625rem;
+		  --bs-border-radius-xxl:  0.5625rem;
+		  --bs-border-radius-2xl:  0.5625rem;
+		  --bs-border-radius-pill: 50rem;
+		  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+		  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+		  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+		  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+		  --bs-focus-ring-width: 0.25rem;
+		  --bs-focus-ring-opacity: 0.25;
+		  --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+		  --bs-form-valid-color: #198754;
+		  --bs-form-valid-border-color: #198754;
+		  --bs-form-invalid-color: #dc3545;
+		  --bs-form-invalid-border-color: #dc3545;
+		  --bs-background-overlay: rgba(10,0,0,0.3);
+		  --bs-font-weight-bold: 500;
+		}
+
+    .bg-primary-light {
+      background-color: var(--bs-primary-light);
+    }
+
+    /* Typography */
+
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-5, .display-6 {
+			font-family: var(--bs-font-serif);
+		}
+
+		.ff-serif {
+			font-family: var(--bs-font-serif);
+		}
+
+		.ff-sans {
+			font-family: var(--bs-font-sans-serif);
+		}
+
+    b,
+    strong,
+    bold,
+    .fw-bold,
+    .display-1, 
+    .display-2, 
+    .display-3, 
+    .display-4, 
+    .display-5, 
+    .display-6 {
+      font-weight: 500;
+    }
+
+    .text-bg-primary {
+      color: rgb(255, 255, 255) !important;
+    }
+
+    /* Buttons */
+
+		.btn-primary {
+		  --bs-btn-color: rgb(255, 255, 255);
+		  --bs-btn-bg: var(--bs-primary);
+		  --bs-btn-border-color: transparent;
+		  --bs-btn-hover-color: rgb(255, 255, 255);
+		  --bs-btn-hover-bg: var(--bs-primary-hover);
+		  --bs-btn-hover-border-color: transparent;
+		  --bs-btn-active-color:  rgb(255, 255, 255);
+		  --bs-btn-active-bg: var(--bs-primary-hover);
+		}
+
+    .btn-primary-light {
+      --bs-btn-color: var(--bs-dark);
+      --bs-btn-bg: var(--bs-primary-light);
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: var(--bs-dark);
+      --bs-btn-hover-bg: var(--bs-primary-light-hover);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: var(--bs-dark);
+      --bs-btn-active-bg: var(--bs-primary-light-hover);
+    }
+
+    .btn-white {
+      --bs-btn-color: var(--bs-dark);
+      --bs-btn-bg: rgb(var(--bs-white-rgb));
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: var(--bs-dark);
+      --bs-btn-hover-bg: rgba(var(--bs-white-rgb), 0.6);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: var(--bs-dark);
+      --bs-btn-active-bg: rgba(var(--bs-white-rgb), 0.6);
+    }
+
+    .btn-primary-dark {
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: rgba(var(--bs-dark-rgb), 1);
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: rgba(var(--bs-dark-rgb), 0.6);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: var(--bs-white);
+      --bs-btn-active-bg: rgba(var(--bs-dark-rgb), 0.6);
+    }
+
+    .btn-secondary {
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bs-secondary);
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: var(--bs-secondary-hover);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: var(--bs-white);
+      --bs-btn-active-bg: var(--bs-secondary-hover);
+    }
+
+    /* Creating buttons with opacity */
+
+    .btn-bg-primary {
+      --bs-btn-color: #232044;
+      --bs-btn-bg: rgba(255, 255, 255, var(--bs-bg-opacity));
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: #232044;
+      --bs-btn-hover-bg: rgba(255, 255, 255, 0.6);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: #232044;
+      --bs-btn-active-bg: rgba(255, 255, 255, 0.6);
+    }
+
+    .btn-bg-dark {
+      --bs-btn-color: var(--bs-dark);
+      --bs-btn-bg: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: var(--bs-dark);
+      --bs-btn-hover-bg: rgba(var(--bs-white-rgb), 0.6);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: var(--bs-dark);
+      --bs-btn-active-bg: rgba(var(--bs-white-rgb), 0.6);
+    }
+
+    .btn-bg-light, .btn-, .btn-bg-graylighter {
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+      --bs-btn-border-color: transparent;
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: rgba(var(--bs-dark-rgb), 0.6);
+      --bs-btn-hover-border-color: transparent;
+      --bs-btn-active-color: var(--bs-white);
+      --bs-btn-active-bg: rgba(var(--bs-dark-rgb), 0.6);
+    }
+
+    /* Forms */
+
+    .text-bg-primary {
+
+      label.form-label {
+        color: rgb(255, 255, 255) !important;
+      }
+    }
+
+    .text-bg-dark,
+    .text-bg-primary-dark {
+
+      label.form-label {
+        color: var(--bs-white) !important;
+      }
+    }
+
+    .text-bg-white,
+    .text-bg-primary-light,
+    .text-bg-light {
+
+      label.form-label {
+        color: var(--bs-dark) !important;
+      }
+    }
+
+    /* Slick */
+
+    .text-bg-primary {
+
+      .slick-arrow {
+        color: rgb(255, 255, 255) !important;
+        border-color: rgb(255, 255, 255) !important;
+      }
+    }
+
+    .text-bg-dark,
+    .text-bg-primary-dark {
+
+      .slick-arrow{
+        color: var(--bs-white) !important;
+        border-color: var(--bs-white) !important;
+      }
+
+      .slick-dots li button {
+        background-color: rgba(var(--bs-white-rgb), 0.5) !important;
+        border-color: rgba(var(--bs-white-rgb), 0.5) !important;
+      }
+
+      .slick-dots li.slick-active button {
+        background-color: var(--bs-white) !important;
+        border-color: var(--bs-white) !important;
+      }
+    }
+    

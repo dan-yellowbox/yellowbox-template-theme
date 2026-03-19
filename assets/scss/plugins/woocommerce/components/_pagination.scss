@@ -1,0 +1,62 @@
+.woocommerce-pagination {
+
+  ul {
+    display: flex;
+    @include list-unstyled();
+    margin-top: $spacer;
+
+    a,
+    span {
+      position: relative;
+      display: block;
+      color: $pagination-color;
+      text-decoration: if($link-decoration == none, null, none);
+      background-color: $pagination-bg;
+      border: $pagination-border-width solid $pagination-border-color;
+      @include transition($pagination-transition);
+      padding: ($spacer * 0.25) ($spacer * 0.75);
+
+      &:hover {
+        z-index: 2;
+        color: $pagination-hover-color;
+        text-decoration: if($link-hover-decoration == underline, none, null);
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border-color;
+      }
+
+      &:focus {
+        z-index: 3;
+        color: $pagination-focus-color;
+        background-color: $pagination-focus-bg;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+      }
+    }
+
+    li {
+      &:not(:first-child) a,
+      &:not(:first-child) span {
+        margin-left: $pagination-margin-start;
+        border-radius: 0;
+      }
+
+      &:first-child a,
+      &:first-child span {
+        border-radius: 0.25em 0 0 0.25em;
+      }
+
+      &:last-child a,
+      &:last-child span {
+        border-radius: 0 0.25em 0.25em 0;
+      }
+
+      &:not(:first-child) a.current,
+      &:not(:first-child) span.current {
+        z-index: 3;
+        color: $pagination-active-color;
+        @include gradient-bg($pagination-active-bg);
+        border-color: $pagination-active-border-color;
+      }
+    }
+  }
+}

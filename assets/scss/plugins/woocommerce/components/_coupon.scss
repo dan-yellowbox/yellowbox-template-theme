@@ -1,0 +1,45 @@
+.coupon,
+.checkout_coupon {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  label,
+  > p:first-child {
+    flex: 100% 1 0;
+  }
+
+  .form-row-first,
+  >input[type="text"] {
+    flex: calc(100% - 180px - #{$spacer}) 0 1;
+  }
+
+  .form-row-last,
+  > button[type="submit"] {
+    flex: 180px 1 0;
+    margin-left: $spacer;
+
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+
+    > input[type="text"] {
+      flex: 100% 1 0;
+      margin-bottom: 1rem;
+    }
+
+    > button[type="submit"] {
+      margin-left: 0;
+      flex: 100% 1 0;
+    }
+  }
+}
+
+.coupon,
+.checkout_coupon,
+.woocommerce-form-coupon-toggle {
+  margin-bottom: $spacer;
+}

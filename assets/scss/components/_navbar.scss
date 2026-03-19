@@ -1,0 +1,142 @@
+.navbar {
+  position: relative;
+  z-index: 1030;
+
+  .navbar-dropdown-toggle-mobile {
+    display: none;
+  }
+
+  .navbar-brand {
+
+    img, svg {
+      max-width: 100%;
+    }
+  }
+
+  .navbar-toggler {
+    display: none !important;
+
+    &[aria-expanded="true"] {
+
+      .navbar-toggler-icon {
+        background-image: escape-svg($navbar-light-toggler-icon-bg-active);
+      }
+    }
+  }
+
+  .navbar-toggler,
+  .nav-button {
+    padding: 1rem;
+    border: 1px solid rgba($navbar-light-color ,0.25);
+    border-radius: $border-radius;
+    height: 2.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.navbar-dark {
+
+    .navbar-toggler {
+
+      &[aria-expanded="true"] {
+
+        .navbar-toggler-icon {
+          background-image: escape-svg($navbar-dark-toggler-icon-bg-active);
+        }
+      }
+    }
+
+    .navbar-toggler,
+    .nav-button {
+      border: 1px solid rgba($navbar-dark-color ,0.25);
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    .navbar-brand {
+      margin-right: auto;
+    }
+
+    .navbar-toggler {
+      display: flex !important;
+    }
+  }
+}
+
+.navbar-fixed {
+  transition: $transition-base;
+}
+
+.navbar-mobile {
+
+  .nav-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba($border-color, 0.5);
+
+    .navbar-dropdown-toggle-mobile {
+      position: relative;
+      display: block;
+      flex: calc(25px + 2rem) 0 1;
+      width: calc(25px + 2rem);
+      border-left: 1px solid rgba($border-color, 0.5);
+      padding: 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border: none;
+        height: 1px;
+        width: 12px;
+        background: $body-color;
+        margin: auto;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    .nav-link {
+      position: relative;
+      flex: calc(100% - 25px - 2rem) 0 1;
+      padding: 1rem 1rem;
+      margin: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .dropdown-menu {
+      flex: 100% 1 0;
+      padding: 0.5rem 1rem;
+      border: 0;
+      margin: 0;
+      background: #f1f1f1;
+    }
+
+    &.show {
+
+      .navbar-dropdown-toggle-mobile {
+
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}

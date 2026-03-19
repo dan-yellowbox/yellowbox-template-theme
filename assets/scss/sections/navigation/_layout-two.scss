@@ -1,0 +1,15 @@
+.layout-two {
+
+	@include media-breakpoint-up(lg) {
+
+		.navbar {
+			flex-wrap: wrap;
+
+			.navbar-collapse {
+				border-top: 1px solid $border-color;
+				padding-top: $navbar-padding-y;
+				margin-top: $navbar-padding-y;
+			}
+		}
+	}
+}

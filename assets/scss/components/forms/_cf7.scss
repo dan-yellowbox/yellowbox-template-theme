@@ -1,0 +1,52 @@
+.wpcf7-form {
+
+  .wpcf7-not-valid-tip {
+    font-size: $small-font-size;
+  }
+
+  .wpcf7-response-output { 
+    margin: 1rem 0 0 !important;
+    border-radius: $border-radius !important;
+    text-align: center !important;
+    border-width: 1px !important;
+    border-color: $blue !important;
+    background: rgba($blue, 0.05) !important;
+  }
+
+  &.sent {
+
+    .wpcf7-response-output {  
+      border-color: $green !important;
+      background: rgba($green, 0.05) !important;
+    }
+  }
+
+  &.invalid,
+  &.failed,
+  &.aborted,
+  &.invalid,
+  &.unaccepted {
+
+    .wpcf7-response-output {  
+      border-color: $red !important;
+      background: rgba($red, 0.05) !important;
+    }
+  }
+
+  &.submitting {
+
+    input[type="submit"] {
+      pointer-events: none;
+      opacity: 0.65;
+      color: rgba(0,0,0,0);
+      background-image: url("data:image/svg+xml,<svg width='24' fill='white' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><style>.cf7-spinner{transform-origin:center;animation:cf7Spinner .75s infinite linear}@keyframes cf7Spinner{100%{transform:rotate(360deg)}}</style><path d='M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z' class='cf7-spinner'/></svg>");
+      background-size: 32px 32px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .wpcf7-spinner {
+      display: none !important;
+    }
+  }
+}

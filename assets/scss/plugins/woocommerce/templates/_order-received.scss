@@ -1,0 +1,14 @@
+.woocommerce-order-received {
+
+  .woocommerce-column {
+    display: block;
+    width: 100%;
+    border-radius: $border-radius;
+    padding: 1rem;
+    background: $white;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

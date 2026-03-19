@@ -1,0 +1,63 @@
+.woocommerce-notices-wrapper {
+
+  > div {
+    margin-bottom: $spacer;
+  }
+}
+
+.woocommerce-NoticeGroup {
+  width: 100%;
+}
+
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-notice,
+.woocommerce-error {
+  display: flex;
+  align-items: center;
+  @include border-radius($input-border-radius, 0);
+  border: 1px solid $primary;
+  background: rgba($primary, 0.05);
+  padding: ($spacer * 0.5);
+  color: $dark;
+
+  li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include list-unstyled();
+  }
+
+  .button {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+.woocommerce-info {
+  border: 1px solid $black;
+  background: none;
+
+  .showcoupon {
+    margin-left: ($spacer * 0.5);
+  }
+}
+
+.woocommerce-error {
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid $red;
+  background: rgba($red, 0.05);
+}
+
+@include media-breakpoint-down(lg) {
+
+  .woocommerce-NoticeGroup,
+  .woocommerce-notices-wrapper,
+  .woocommerce-message,
+  .woocommerce-info,
+  .woocommerce-notice,
+  .woocommerce-error  {
+    order: -1
+  }
+}

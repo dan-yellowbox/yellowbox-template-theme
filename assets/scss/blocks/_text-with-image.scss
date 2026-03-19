@@ -1,0 +1,220 @@
+$gutter: 1.75rem;
+$cols: 4;
+
+// XXL
+$close-gap-xxl: calc(-50vw + (map-get($container-max-widths, xxl) / 2 ));
+$gap-xxl: calc(50vw - (map-get($container-max-widths, xxl) / 2 ));
+$container-xxl: calc( map-get($container-max-widths, xxl) - (#{$spacer} * 1.5 ) );
+$columns-xxl: calc( ( $container-xxl / 12 ) * $cols );
+$image-xxl: calc( $columns-xxl + #{$gap-xxl} );
+
+// XL
+$close-gap-xl: calc(-50vw + (map-get($container-max-widths, xl) / 2 ));
+$gap-xl: calc(50vw - (map-get($container-max-widths, xl) / 2 ));
+$container-xl: calc( map-get($container-max-widths, xl) - (#{$spacer} * 1.5 ) );
+$columns-xl: calc( ( $container-xl / 12 ) * $cols );
+$image-xl: calc( $columns-xl + #{$gap-xl} );
+
+// LG
+$close-gap-lg: calc(-50vw + (map-get($container-max-widths, lg) / 2 ));
+$gap-lg: calc(50vw - (map-get($container-max-widths, lg) / 2 ));
+$container-lg: calc( map-get($container-max-widths, lg) - (#{$spacer} * 1.5 ) );
+$columns-lg: calc( ( $container-lg / 12 ) * $cols );
+$image-lg: calc( $columns-lg + #{$gap-lg} );
+
+
+
+.block-text_with_image {
+
+  @include media-breakpoint-up(lg) {
+
+    &.stretched.image-small {
+
+      .image {
+
+        img {
+          width: $image-lg;
+          max-width: unset;
+          left: unset;
+          right: unset;
+        }
+      }
+
+      &.image-left {
+
+        .image {
+
+          img {
+            margin-left: calc($close-gap-lg - ($spacer * 0.75));
+          }
+        }
+      }
+
+      &.image-right {
+
+        .offset-lg-1 {
+          margin-right: auto;
+        }
+
+        .image {
+
+          img {
+            margin-right: calc($close-gap-lg - ($spacer * 0.75));
+          }
+        }
+      }
+    }
+
+    &[class*="stretched"] {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+
+      .row {
+        height: 100%;
+      }
+
+      .image {
+        position: relative;
+        min-height: 500px;
+
+        .ratio {
+          position: unset;
+        }
+      }
+
+      &.image-left {
+
+        .image {
+
+          img {
+            border-bottom-left-radius: 0 !important;
+            border-top-left-radius: 0 !important;
+          }
+        }
+      }
+
+      &.image-right {
+
+        .image {
+
+          img {
+            border-bottom-right-radius: 0 !important;
+            border-top-right-radius: 0 !important;
+          }
+        }
+      }
+    }
+
+    &.stretched.image-large {
+
+      .image {
+
+        img {
+          width: calc(50vw - #{$gutter});
+          max-width: unset;
+          left: unset;
+          right: unset;
+        }
+      }
+
+      &.image-left {
+
+        .image {
+
+          img {
+            margin-left: calc(-50vw + 100% - #{$gutter});
+          }
+        }
+      }
+
+      &.image-right {
+
+        .image {
+
+          img {
+            margin-right: calc(-50vw + 100% - #{$gutter});
+          }
+        }
+      }
+    }
+
+    &.image-left {
+
+      .image {
+        order: -1;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+
+    &.stretched.image-small {
+
+      .image {
+
+        img {
+          width: $image-xl;
+          max-width: unset;
+          left: unset;
+          right: unset;
+        }
+      }
+
+      &.image-left {
+
+        .image {
+
+          img {
+            margin-left: calc($close-gap-xl - ($spacer * 0.75));
+          }
+        }
+      }
+
+      &.image-right {
+
+        .image {
+
+          img {
+            margin-right: calc($close-gap-xl - ($spacer * 0.75));
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+
+    &.stretched.image-small {
+
+      .image {
+
+        img {
+          width: $image-xxl;
+          max-width: unset;
+          left: unset;
+          right: unset;
+        }
+      }
+
+      &.image-left {
+
+        .image {
+
+          img {
+            margin-left: calc($close-gap-xxl - ($spacer * 0.75));
+          }
+        }
+      }
+
+      &.image-right {
+
+        .image {
+
+          img {
+            margin-right: calc($close-gap-xxl - ($spacer * 0.75));
+          }
+        }
+      }
+    }
+  }
+}

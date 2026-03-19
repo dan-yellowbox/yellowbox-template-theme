@@ -1,0 +1,180 @@
+.video {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  * {
+  	object-fit: cover;
+  }
+
+  .video-button {
+    position: absolute;
+    text-align: center;
+    color: $dark;
+    box-shadow: $box-shadow-lg;
+    transition: $transition-base;
+    background: rgba($white, 0.8);
+    text-decoration: none;
+    border-radius: $border-radius-pill;
+    z-index: 5;
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    &.play {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 5rem;
+      width: 5rem;
+      line-height: 5rem;
+      margin: auto;
+      font-size: $h3-font-size;
+
+      i {
+        transform: translateX(0.1rem)
+      }
+    }
+
+    &.play-pause {
+      top: unset;
+      right: unset;
+      bottom: 2rem;
+      left: 1rem;
+    }
+
+    &.mute {
+      top: unset;
+      right: 1rem;
+      bottom: 2rem;
+      left: unset;
+    }
+
+    &.close {
+      top: 1rem;
+      right: 1rem;
+      bottom: unset;
+      left: unset;
+    }
+  }
+
+  &:hover {
+
+    .video-button {
+      background: rgba($white, 1);
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    .video-button {
+      transform: scale(0.75);
+    }
+  }
+}
+
+.video-modal {
+  
+  .modal-dialog {
+    max-width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .video-seeker {  
+    cursor: pointer;
+    height: 5px;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .video-seeker span {
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0px;
+  }
+
+  .modal-body {
+
+    .video {
+
+      .video-button {
+        opacity: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        line-height: 2.5rem;
+        margin: auto;
+        font-size: $h6-font-size;
+      }
+    }
+   
+    &:hover {
+
+      .video {
+
+        .video-button {
+          opacity: 1;
+
+          &:hover {
+            background: rgba($white, 1);
+          }
+        }
+      }
+
+      .video-seeker {
+        height: 10px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .video-seeker span {
+        background: rgba(255, 255, 255, 1);
+        height: 10px;
+      }
+    } 
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    .video {
+
+      .video-button {
+        opacity: 1;
+
+        &.play-pause {
+          bottom: 0.5rem;
+          left: 0.5rem;
+        }
+
+        &.mute {
+          right: 0.5rem;
+          bottom: 0.5rem;
+        }
+
+        &.close {
+          top: 0.5rem;
+          right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.video-loader * {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

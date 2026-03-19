@@ -1,0 +1,131 @@
+.woocommerce-account {
+
+  .entry-content {
+
+    .woocommerce {
+      display: flex;
+      flex-wrap: wrap;
+
+      #customer_login {
+        display: flex;
+        justify-content: space-between;
+
+        .col-1,
+        .col-2 {
+          width: 47%;
+        }
+      }
+
+      form {
+        width: 100%;
+      }
+
+      .woocommerce-MyAccount-navigation {
+        flex: 300px 1 0;
+        margin-right: ($spacer * 1.5);
+
+        ul {
+          display: flex;
+          flex-direction: column;
+
+          // No need to set list-style: none; since .list-group-item is block level
+          padding-left: 0; // reset padding because ul and ol
+          margin-bottom: 0;
+          @include border-radius($list-group-border-radius);
+
+          li {
+            position: relative;
+            display: block;
+            padding: $list-group-item-padding-y $list-group-item-padding-x;
+            color: $list-group-color;
+            text-decoration: if($link-decoration == none, null, none);
+            background-color: $list-group-bg;
+            border: $list-group-border-width solid $list-group-border-color;
+
+            a {
+              text-decoration: none;
+            }
+
+            &:first-child {
+              @include border-top-radius(inherit);
+            }
+
+            &:last-child {
+              @include border-bottom-radius(inherit);
+            }
+
+            &.disabled,
+            &:disabled {
+              color: $list-group-disabled-color;
+              pointer-events: none;
+              background-color: $list-group-disabled-bg;
+            }
+
+            // Include both here for `<a>`s and `<button>`s
+            &.is-active {
+              z-index: 2; // Place active items above their siblings for proper border styling
+              color: $list-group-active-color;
+              background-color: $list-group-active-bg;
+              border-color: $list-group-active-border-color;
+
+              a {
+                color: $white;
+              }
+            }
+
+            & + & {
+              border-top-width: 0;
+
+              &.is-active {
+                margin-top: -$list-group-border-width;
+                border-top-width: $list-group-border-width;
+
+                a {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .woocommerce-MyAccount-content {
+        flex: calc(100% - 300px - 1.5rem) 0 1;
+      }
+
+      .woocommerce-Addresses {
+
+        .woocommerce-Address {
+          width: 100%;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+
+      .woocommerce {
+        flex-direction: column;
+
+        .woocommerce-MyAccount-content {
+          flex: 100%;
+        }
+
+        #customer_login {
+          flex-direction: column;
+
+          .col-1,
+          .col-2 {
+            width: 100%;
+            margin-bottom: 1.5rem;
+          }
+        }
+
+        .woocommerce-MyAccount-navigation {
+          flex: 100% 1 0;
+          margin-right: 0;
+          margin-bottom: ($spacer * 1.5);
+        }
+      }
+    }
+  }
+}

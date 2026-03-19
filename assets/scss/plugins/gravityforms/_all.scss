@@ -1,0 +1,63 @@
+.gform_wrapper.gravity-theme {
+
+	.floating > label:first-child {
+		display: none !important;
+	}
+
+	.form-floating {
+
+	  > .form-control,
+	  > .form-select,
+	  > .wpcf7-form-control-wrap > .form-control,
+	  > .wpcf7-form-control-wrap > .form-select {
+	    height: $form-floating-height;
+	    line-height: $form-floating-line-height;
+	  }
+
+	  > .form-control,
+	  > .wpcf7-form-control-wrap > .form-control {
+	    padding: $form-floating-padding-y $form-floating-padding-x;
+
+	    &::placeholder {
+	      color: transparent;
+	    }
+
+	    &:focus,
+	    &:not(:placeholder-shown) {
+	      padding-top: $form-floating-input-padding-t !important;
+	      padding-bottom: $form-floating-input-padding-b !important;
+	    }
+
+	    &:-webkit-autofill {
+	      padding-top: $form-floating-input-padding-t !important;
+	      padding-bottom: $form-floating-input-padding-b !important;
+	    }
+	  }
+
+	  label.focused {
+	    opacity: $form-floating-label-opacity;
+	    transform: $form-floating-label-transform;
+	  }
+	}
+
+	.gform-footer,
+	.gform_page_footer {
+
+		button {
+			margin-bottom: 0 !important;
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	// Validation Message
+	.field_sublabel_above .description, .field_sublabel_above .gfield_description, .field_sublabel_above .gsection_description {
+		padding: 0 !important;
+	    font-size: 12px !important;
+	    background: none !important;
+	    border: none !important;
+	    margin-top: 3px !important;
+	}
+}

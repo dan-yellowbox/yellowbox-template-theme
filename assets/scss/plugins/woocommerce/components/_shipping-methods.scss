@@ -1,0 +1,12 @@
+ul.woocommerce-shipping-methods {
+  padding: 0;
+
+  li {
+    @include list-unstyled();
+    display: flex;
+
+    label {
+      margin-left: ($spacer * 0.5);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.accordion {
+
+  .accordion-item {
+    border-radius: $accordion-border-radius;
+    overflow: hidden;
+    border: $accordion-border-width solid $accordion-border-color;
+
+    button {
+      outline: 0;
+      
+      &:hover {
+        background: $accordion-bg;
+        color: $primary;
+      }
+    }
+  }
+}

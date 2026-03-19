@@ -1,0 +1,29 @@
+.layout-three {
+
+	@include media-breakpoint-up(xl) {
+
+		.navbar {
+
+			.navbar-collapse {
+				flex-grow: 0;
+				margin-left: -$navbar-nav-link-padding-x;
+				margin-right: $navbar-nav-link-padding-x;
+			}
+
+
+			.navbar-nav {
+				width: 550px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(xl) {
+
+		.navbar {
+
+			.navbar-toggler {
+			  display: flex !important;
+			}
+		}
+	}
+}

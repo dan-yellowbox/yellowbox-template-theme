@@ -1,0 +1,25 @@
+button,
+.button {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  border-width: $btn-border-width;
+  font-weight: $btn-font-weight;
+  color: $white;
+  background-color: $dark;
+  border-color: $dark;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-y $btn-padding-x;
+  text-decoration: none;
+  border-style: solid;
+  font-size: $btn-font-size;
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,20 @@
+.animate-in {
+  opacity: 0;
+  transition: all 900ms ease-in-out;
+
+  &.animate-up {
+    transform: translateY(100px);
+  }
+
+  &.animate-right {
+    transform: translateX(-100px);
+  }
+
+  &.animate-down {
+    transform: translateY(-100px);
+  }
+
+  &.animate-left {
+    transform: translateX(100px);
+  }
+}

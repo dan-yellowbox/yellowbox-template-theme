@@ -1,0 +1,134 @@
+// [class*="-carousel"]:not(.slick-slider) {
+//   display: flex;
+
+//   > div {
+//     width: 100%;
+
+//     &:not(:first-child) {
+//       display: none;
+//     }
+//   }
+// }
+
+.slick-slider.slick-vertical .slick-track {
+  display: block;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  outline: 0 !important;
+  height: inherit;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+  z-index: 10;
+  height: 3.5rem;
+  width: 3.5rem;
+  background: transparent;
+  color: $dark;
+  border-radius: $btn-border-radius;
+  border: 1px solid $dark;
+
+  &.slick-prev {
+    left: 1.5rem;
+  }
+
+  &.slick-next {
+    right: 1.5rem;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3px;
+
+  li {
+    margin: ($spacer * 1.5) 0 0;
+
+    button {
+      height: 12px;
+      width: 12px;
+      font-size: 0;
+      line-height: 0;
+      -webkit-appearance: none;
+      margin: 0 5px;
+      border-radius: $border-radius-pill;
+      padding: 0;
+      background: $gray-300;
+      border: none;
+    }
+
+    &.slick-active {
+
+      button {
+        background: $primary;
+      }
+    }
+
+    &:only-child {
+      display: none;
+    }
+  }
+}
+
+.controls {
+  display: flex;
+
+  .slick-arrow {
+    position: relative;
+    top: unset;
+    bottom: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    z-index: 10;
+    height: 3.25rem;
+    width: 3.25rem;
+    min-height: 100%;
+    color: $dark;
+    border-radius: $btn-border-radius;
+    border: 1px solid $dark;
+
+    &.slick-prev {
+      left: unset;
+      margin-right: 0.5rem;
+    }
+
+    &.slick-next {
+      right: unset;
+
+      &:nth-child(3) {
+        margin-left: 0.5rem;
+      }
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}

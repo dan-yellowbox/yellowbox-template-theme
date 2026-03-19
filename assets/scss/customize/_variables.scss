@@ -1,0 +1,57 @@
+// Navbar Toggle
+$navbar-dark-toggler-icon-bg-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M7.27,7.209,23.068,23M7.27,23l15.8-15.791' transform='translate(0 0)' stroke='#{$navbar-dark-color}' stroke-width='2'/></svg>");
+$navbar-light-toggler-icon-bg-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path d='M7.27,7.209,23.068,23M7.27,23l15.8-15.791' transform='translate(0 0)' stroke='#{$navbar-light-color}' stroke-width='2'/></svg>");
+
+// WooCommerce
+$woocommerce-button-background: $green;
+
+:root {
+	--bs-background-overlay: rgba(0,0,0,1);
+}
+
+// Opacity
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+      property: opacity,
+      class: opacity,
+      state: hover,
+      values: (
+        0: 0,
+        25: .25,
+        50: .50,
+        75: .75,
+        100: 1
+      )
+    )
+  )
+);
+
+// Check List
+%check-list {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+    font-weight: 500;
+    padding-left: 1.75rem;
+    position: relative;
+
+    &::before {
+      content: url('data:image/svg+xml, <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5Z" fill="%237157FF"/><path d="M17.7556 8.1187C17.9956 8.28489 18.0489 8.60863 17.8778 8.84173L12.0111 16.7842C11.92 16.9072 11.7778 16.9871 11.6222 16.9978C11.4667 17.0086 11.3111 16.9568 11.2 16.8489L8.17778 13.9137C7.96889 13.7108 7.96889 13.3827 8.17778 13.182C8.38667 12.9813 8.72444 12.9791 8.93111 13.182L11.5111 15.6835L17.0111 8.23741C17.1822 8.00432 17.5156 7.95252 17.7556 8.1187Z" fill="white"/></svg>');
+      left: 0;
+      height: 1.25rem;
+      width: 1.25rem;
+      position: absolute;
+      display: inline-block;
+      top: 2px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
