@@ -689,7 +689,7 @@ function yellowbox_theme_update_check( $transient ) {
         return $transient;
     }
 
-    $theme_slug = 'yellow-box-theme';
+    $theme_slug = 'yellowbox-template-theme';
     $remote_url = 'https://yellowboxmarketing.co.uk/resources/theme-update.json';
 
     // 1. Get the remote JSON
