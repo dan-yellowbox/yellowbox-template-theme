@@ -269,6 +269,7 @@ require get_template_directory() . '/inc/widgets.php';
  */
 require get_template_directory() . '/inc/post-types/case-studies.php';
 require get_template_directory() . '/inc/post-types/global-blocks.php';
+require get_template_directory() . '/inc/post-types/reviews.php';
 
 /**
  * Capabilities
@@ -398,6 +399,10 @@ function my_generate_css_on_options_save( $post_id, $menu_slug ) {
     // Generate CSS (example – customize this)
     $css = "
 		/* AUTOMATICALLY GENEREATED FILE - DO NOT EDIT */
+
+    [data-bs-theme=dark] {
+      --bs-nav-pills-link-active-bg: " . $primary_colour . ";
+    }
 
 		:root,
 		[data-bs-theme=light] {

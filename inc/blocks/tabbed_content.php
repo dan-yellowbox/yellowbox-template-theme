@@ -10,6 +10,12 @@
   $paneCount = 0;
   $tabCount = 0;
 
+  if( block_design_background_colour() == 'bg-dark' || block_design_background_colour() == 'bg-primary-dark' ) {
+    $tab_theme = 'data-bs-theme="dark"';
+  } else {
+    $tab_theme = '';
+  }
+
   $settings_id = get_sub_field('block_settings_id');
 ?>
 
@@ -21,7 +27,7 @@
     <?php echo block_design_gap_bottom(); ?>
     <?php echo block_design_padding_top(); ?>
     <?php echo block_design_padding_bottom(); ?>
-    <?php echo block_design_background_colour(); ?>
+    text-<?php echo block_design_background_colour(); ?>
     overflow-hidden
   ">
   <?php if( $heading || $subheading ) { ?>
@@ -37,7 +43,7 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col">
-        <ul class="nav nav-underline justify-content-lg-center" id="tabsBlock<?php echo $tabBlockID; ?>" role="tablist">
+        <ul class="nav nav-pills justify-content-lg-center" id="tabsBlock<?php echo $tabBlockID; ?>" <?php echo $tab_theme; ?> role="tablist" >
           <?php foreach( $tabs as $pane ) { ?>
             <li class="nav-item">
               <a class="nav-link <?php if( $paneCount == 0 ) echo 'active'; ?>" id="tab<?php echo $paneCount; ?>" data-bs-toggle="tab" data-bs-target="#tab-pane<?php echo $paneCount; ?>" type="button" role="tab" aria-controls="tab-pane<?php echo $paneCount; ?>" aria-selected="<?php echo ( $paneCount == 0 ? 'true' : 'false' ); ?>"><?php echo $pane['heading']; ?></a>

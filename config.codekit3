@@ -1579,6 +1579,18 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/css\/admin-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/admin-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/css\/admin.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -1600,6 +1612,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/css\/theme-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/css\/variables.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/variables-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -2380,6 +2404,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/blocks\/_marquee.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/blocks\/_reviews.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/blocks\/_reviews.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -3280,6 +3319,14 @@
       "oAP" : "\/home.php",
       "oF" : 0
     },
+    "\/inc\/acf-fields.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/inc\/acf-fields.php",
+      "oF" : 0
+    },
     "\/inc\/blocks\/accordion.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3392,6 +3439,14 @@
       "oAP" : "\/inc\/blocks\/posts_feed.php",
       "oF" : 0
     },
+    "\/inc\/blocks\/reviews.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/inc\/blocks\/reviews.php",
+      "oF" : 0
+    },
     "\/inc\/blocks\/tabbed_content.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3438,6 +3493,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/inc\/bootstrap-navigation.php",
+      "oF" : 0
+    },
+    "\/inc\/capabilities.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/inc\/capabilities.php",
       "oF" : 0
     },
     "\/inc\/class-tgm-plugin-activation.php" : {
@@ -3496,6 +3559,14 @@
       "oAP" : "\/inc\/post-types\/global-blocks.php",
       "oF" : 0
     },
+    "\/inc\/post-types\/reviews.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/inc\/post-types\/reviews.php",
+      "oF" : 0
+    },
     "\/inc\/template-functions.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3551,14 +3622,6 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
-    },
-    "\/lib\/plugins\/advanced-custom-fields-pro.zip" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/lib\/plugins\/advanced-custom-fields-pro.zip",
-      "oF" : 0
     },
     "\/LICENSE" : {
       "cB" : 0,
@@ -3685,6 +3748,22 @@
       "oAP" : "\/template-parts\/content-blocks.php",
       "oF" : 0
     },
+    "\/template-parts\/content-case_studies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/content-case_studies.php",
+      "oF" : 0
+    },
+    "\/template-parts\/content-category-case_studies.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/template-parts\/content-category-case_studies.php",
+      "oF" : 0
+    },
     "\/template-parts\/content-category.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3774,7 +3853,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 711880049.15508699,
-    "displayValue" : "yellow-box-theme",
+    "displayValue" : "yellowbox-template-theme",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-verd",
     "iconImageWasSetByUser" : 0

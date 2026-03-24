@@ -250,6 +250,57 @@ jQuery(document).ready(function($){
       ]
     });
   });
+  $('.block-reviews').each( function() {
+    const carousel = $(this).find('.cards-carousel');
+    carousel.slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      appendArrows: $(this).find('.carousel-container'), // alternatively use .controls
+      prevArrow: '<i class="slick-prev fa-light fa-arrow-left fs-5"></i>',
+      nextArrow: '<i class="slick-next fa-light fa-arrow-right fs-5"></i>',
+      swipeToSlide: true,
+      touchThreshold: 10,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+  });
+  // Review Cards - Trim Content
+  if( $('.block-reviews').length > 0 ) {
+    $('.block-reviews').each( function() {
+      var card = $(this).find('.card');
+      card.each( function() {
+        var review = $(this).find('.review-content')
+        var originalText = review.html();
+        var text = review.text();
+        if( review.text().length > 169 ) {
+          text = text.substr(0,170) + '... <a href="#" class="read-more fw-bold text-decoration-none" style="cursor: pointer;">Read more</a>';
+          review.html(text);
+          $('.read-more').on('click', function(e) {
+            e.preventDefault();
+            $(this).hide();
+            review.html(originalText);
+          });
+        }
+      });
+    });
+  }
 
   /**
    * 
