@@ -12,6 +12,8 @@
   $logo_width_mobile = get_field('footer_logo_width_mobile', 'options');
 
 ?>
+  
+  <?php do_action('yellowbox_before_footer'); ?>
 
 	<footer id="colophon" class="site-footer footer-dark bg-dark">
 		<?php if( get_field('logo', 'options') ) { ?>
@@ -83,7 +85,10 @@
 			</div>
 		</section>
 	</footer><!-- #colophon -->
+  <?php do_action('yellowbox_after_footer'); ?>
 </div><!-- #page -->
+
+<?php do_action('yellowbox_after_page'); ?>
 
 <!-- Mobile Menu -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">

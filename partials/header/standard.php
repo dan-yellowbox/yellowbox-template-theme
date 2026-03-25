@@ -5,6 +5,7 @@
   $button_two = get_field('header_button_two');
   $content_alignment = get_field('header_content_alignment');
   $background_type = get_field('header_background_type');
+  $check_list = get_field('header_use_checklist');
   $image = get_field('header_image');
   $video = get_field('header_video');
   $cover = get_field('header_video_cover');
@@ -64,8 +65,16 @@
 	      <div class="<?php echo $content_size; ?>">
 	        <div class="content mx-auto">
 	          <h1 class="display-4"><?php echo ( $heading ? $heading : get_the_title() ); ?></h1>
-	          <?php echo ( $subheading ? '<p class="mt-n2 opacity-75">' . $subheading . '</p>' : '' ); ?>
-	          <?php if( $button || $button_two ) { ?>
+            <?php if( $check_list ) { ?>
+              <?php
+              $listItems = preg_replace('/^(.+)$/m', '<li>$1</li>', trim($subheading));
+              echo '<ul class="list-checklist pt-3">';
+                echo $listItems;
+              echo '</ul>';
+              ?>
+             <?php } else { ?>
+               <?php echo ( $subheading ? '<p class="mt-n2 opacity-75">' . $subheading . '</p>' : '' ); ?>
+             <?php } ?>	          <?php if( $button || $button_two ) { ?>
 	            <div class="d-flex gap-3 <?php echo $button_alignment; ?> mt-5">
 	              <?php echo ( $button ? '<a href="' . $button['url'] . '" target="' . $button['target'] . '" class="btn btn-primary">' . $button['title'] . '</a>' : '' ); ?>
 	              <?php echo ( $button_two ? '<a href="' . $button_two['url'] . '" target="' . $button_two['target'] . '" class="btn bg-white text-white bg-opacity-50">' . $button_two['title'] . '</a>' : '' ); ?>

@@ -25,9 +25,13 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php do_action('yellowbox_before_page'); ?>
 <div id="page" class="site">
 
+
 	<?php get_template_part('partials/navigation/layout-' . $navigation_layout ); ?>
+
+  <?php do_action('yellowbox_after_navbar'); ?>
 
 	<?php
 		$header_style = get_field('header_style');
@@ -37,3 +41,5 @@
 			get_template_part('partials/header/' . $header_style );
 		}
 	?>
+
+  <?php do_action('yellowbox_after_header'); ?>

@@ -3687,6 +3687,14 @@
       "oAP" : "\/partials\/navigation\/layout-two.php",
       "oF" : 0
     },
+    "\/readme.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/readme.txt",
+      "oF" : 0
+    },
     "\/screenshot.png" : {
       "ft" : 32768,
       "iS" : 14487,
