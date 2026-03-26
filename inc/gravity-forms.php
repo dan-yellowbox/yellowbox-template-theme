@@ -65,18 +65,26 @@ function form_submit_button($button, $form){
 add_filter('gform_field_content', 'floating_label_field', 10, 5);
 function floating_label_field($content, $field, $value, $lead_id, $form_id) {
     if ($field->cssClass == 'floating') {
-    	$placeholder = ( $field->placeholder ? $field->placeholder : 'Placeholder required' );
+      $placeholder = ( $field->placeholder ? $field->placeholder : 'Placeholder required' );
         $label_html = '<label for="input_' . $field->formId . '_' . $field->id . '">' . $placeholder . '</label>';
 
         // Move the label directly after the input element
 
-	if($field["type"] == 'textarea') {
-		$content = preg_replace(
+  if($field["type"] == 'textarea') {
+    $content = preg_replace(
             '/(<textarea[^>]*>.*?<\/textarea>)/',
             '${1}' . $label_html,
             $content
         );
-	} else {
+  } elseif ($field->type == 'select') {
+
+    $content = preg_replace(
+      '/(<select[^>]*>.*?<\/select>)/',
+      '${1}' . $label_html,
+      $content
+    );
+
+  } else {
         $content = preg_replace(
             '/(<input[^>]*>)/',
             '${1}' . $label_html,
